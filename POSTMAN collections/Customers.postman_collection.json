@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "7c6cc3b6-12ea-48ff-a830-f16471a7da63",
+		"name": "Customers",
+		"description": "/customers/ \n\n\tdisplays all the customer in the database\n\t\n/customers/id\n\n\tto delete the customer\n\t\n/customer/signup\n\n\tto create a new customer\n\t\n/customer/login\n\n\tto login a customer to get the token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Display Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/customers",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup Customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc3YzlhNmFhNWIwNTA0YzBjYzg5IiwiZW1haWwiOiJjdXN0b21lcjRAdGVzdC5jb20iLCJpYXQiOjE1NzEwNTk2OTMsImV4cCI6MTU3MTA2MzI5M30.IKi7idiPGrqwSa27_uRVuypedNf4OsOFLUtzTjviu4I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"customer5@test.com\",\n    \"password\": \"customer5pwd\",\n    \"phoneNo\": 5556666555,\n    \"address\": \"address5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/customers/signup",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customers",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup Customer twice",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc3YzlhNmFhNWIwNTA0YzBjYzg5IiwiZW1haWwiOiJjdXN0b21lcjRAdGVzdC5jb20iLCJpYXQiOjE1NzEwNTk2OTMsImV4cCI6MTU3MTA2MzI5M30.IKi7idiPGrqwSa27_uRVuypedNf4OsOFLUtzTjviu4I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"customer5@test.com\",\n    \"password\": \"customer5pwd\",\n    \"phoneNo\": 5556666555,\n    \"address\": \"address5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/customers/signup",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customers",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhMzNiYTBlNTllM2UwZTc0OTliZDZmIiwiZW1haWwiOiJjdXN0b21lcjFAdGVzdC5jb20iLCJpYXQiOjE1NzEwNTgxMzYsImV4cCI6MTU3MTA2MTczNn0.e0LvJX_uFP7ZfJN3pcrvhMvQMibOq4J9amCgFohABeM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"customer4@test.com\",\n    \"password\": \"customer4pwd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/customers/login",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customers",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5YzRhNmFhNWIwNTA0YzBjYzhhIiwiZW1haWwiOiJjdXN0b21lcjRAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjA1ODYsImV4cCI6MTU3MTA2NDE4Nn0.J9UFDopOfJs7rCUMBy9uM9HUrvW0Zq1eac3iaMAG8hc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/customers/5da479c4a6aa5b0504c0cc8a",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customers",
+						"5da479c4a6aa5b0504c0cc8a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Other Customer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc3YzlhNmFhNWIwNTA0YzBjYzg5IiwiZW1haWwiOiJjdXN0b21lcjRAdGVzdC5jb20iLCJpYXQiOjE1NzEwNTk2OTMsImV4cCI6MTU3MTA2MzI5M30.IKi7idiPGrqwSa27_uRVuypedNf4OsOFLUtzTjviu4I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/customers/5da33ba0e59e3e0e7499bd6f",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customers",
+						"5da33ba0e59e3e0e7499bd6f"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

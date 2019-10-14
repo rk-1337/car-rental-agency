@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "55982fe0-fd20-442c-98d2-049f8d80d6c6",
+		"name": "Bookings",
+		"description": "/bookings/\n\n\tto book\n\tto get booking details\n\n/bookings/id\n\n\tto get a particular booking details\n\tto delete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all bookings",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjExMDYsImV4cCI6MTU3MTA2NDcwNn0.VWRs8nz7NNCx-KIbtPwzjS-v1eQIwixCexKhrDzEz68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking a car",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjExMDYsImV4cCI6MTU3MTA2NDcwNn0.VWRs8nz7NNCx-KIbtPwzjS-v1eQIwixCexKhrDzEz68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"carId\": \"5da3454545cf8a1d04eda5ff\",\n    \"issue_date\": \"2019-09-13 12:00:00\",\n    \"return_date\": \"2019-09-15 12:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjUwNjAsImV4cCI6MTU3MTA2ODY2MH0.C6MPeHah9q7wQSO7a-qlU73eKpsnuHur8sOYUg-GuSY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/5da48338a6aa5b0504c0cc8e",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						"5da48338a6aa5b0504c0cc8e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booked car details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjUwNjAsImV4cCI6MTU3MTA2ODY2MH0.C6MPeHah9q7wQSO7a-qlU73eKpsnuHur8sOYUg-GuSY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/cars/5da3454545cf8a1d04eda5ff",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cars",
+						"5da3454545cf8a1d04eda5ff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking same car with same dates",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjUwNjAsImV4cCI6MTU3MTA2ODY2MH0.C6MPeHah9q7wQSO7a-qlU73eKpsnuHur8sOYUg-GuSY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"carId\": \"5da3454545cf8a1d04eda5ff\",\n    \"issue_date\": \"2019-09-13 12:00:00\",\n    \"return_date\": \"2019-09-15 12:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking same car with new dates",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjUwNjAsImV4cCI6MTU3MTA2ODY2MH0.C6MPeHah9q7wQSO7a-qlU73eKpsnuHur8sOYUg-GuSY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"carId\": \"5da3454545cf8a1d04eda5ff\",\n    \"issue_date\": \"2019-09-15 12:00:00\",\n    \"return_date\": \"2019-09-16 12:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booked car edit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhMzNiYTBlNTllM2UwZTc0OTliZDZmIiwiZW1haWwiOiJjdXN0b21lcjFAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjQzNzksImV4cCI6MTU3MTA2Nzk3OX0.ykOLDf3KHwcLkBwCLIItNJERdrNVFeN9jILTOm0pS6A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"capacity\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/cars/5da3454545cf8a1d04eda5ff",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cars",
+						"5da3454545cf8a1d04eda5ff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booked car delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhMzNiYTBlNTllM2UwZTc0OTliZDZmIiwiZW1haWwiOiJjdXN0b21lcjFAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjQzNzksImV4cCI6MTU3MTA2Nzk3OX0.ykOLDf3KHwcLkBwCLIItNJERdrNVFeN9jILTOm0pS6A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/cars/5da3454545cf8a1d04eda5ff",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cars",
+						"5da3454545cf8a1d04eda5ff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking car not available",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjQ5MDksImV4cCI6MTU3MTA2ODUwOX0.P1KZ-5cptVUCiWqhmcbKhJDCkKcdDHUZLpEgKDoH2M4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"carId\": \"5da3459d45cf8a1d04eda601\",\n    \"issue_date\": \"2019-09-11 18:00:00\",\n    \"return_date\": \"2019-09-12 20:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete booking details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjExMDYsImV4cCI6MTU3MTA2NDcwNn0.VWRs8nz7NNCx-KIbtPwzjS-v1eQIwixCexKhrDzEz68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/5da48256a6aa5b0504c0cc8d",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						"5da48256a6aa5b0504c0cc8d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete same booking details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cff05aab-acea-4143-9828-8a1314151d7e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNWRhNDc5ZDZhNmFhNWIwNTA0YzBjYzhiIiwiZW1haWwiOiJjdXN0b21lcjVAdGVzdC5jb20iLCJpYXQiOjE1NzEwNjExMDYsImV4cCI6MTU3MTA2NDcwNn0.VWRs8nz7NNCx-KIbtPwzjS-v1eQIwixCexKhrDzEz68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://car-rental-agency.herokuapp.com/bookings/5da48256a6aa5b0504c0cc8d",
+					"protocol": "https",
+					"host": [
+						"car-rental-agency",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bookings",
+						"5da48256a6aa5b0504c0cc8d"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
